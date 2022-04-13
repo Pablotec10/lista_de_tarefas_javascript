@@ -1,0 +1,118 @@
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+body{
+    background-image: linear-gradient(to right, #703434, #3b0529);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+    padding-top: 30px;
+}
+
+#tasks-container{
+    width: 500px;
+    margin: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* pra centralizar as margens do container bota auto nos dois */
+}
+#tasks-header{
+    margin-top: 40px;
+}
+#add-task-form{
+    position: relative;
+}
+#add-task-form input{
+    box-sizing: border-box;  
+    /* pros inputs nao passarem do tamanho normal de 500px q definimos */
+    border: 1px solid #34073d;
+    background: #fff;
+    color: #34073d;
+    padding: 15px;
+    font-size: 18px;
+    width: 100%;
+}
+#add-task-form input::placeholder{
+    color: #34073d;
+}
+#add-task-form input:focus{
+    outline: none;
+    /* tirar a borda de dentro do input */
+}
+#add-btn{
+    position: absolute;
+    cursor: pointer;
+    transition: 0.5;
+    width: 60px;
+    height: 53px;
+    border: 1px solid #34073d;
+    top: 0;
+    right: 0;
+    
+
+}
+#add-btn:hover{
+    background-color: #34073d;
+    color: white;
+}
+ion-icon{
+    font-size: 25px;
+}
+#task-list{
+    list-style: none;
+    padding-left: 0;
+}
+#task-list li{
+    text-align: left;
+    height: 50px;
+    line-height: 50px;
+    position:relative;
+    /* relativo pq os icones vao ter posicao absoluta */
+    border-bottom: 3px solid #34073d;
+    background-color:#fff ;
+    color: #34073d;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    transition: .5s;
+    font-weight: bold;
+}
+#task-list li span{
+    font-size: 18px;
+}
+#task-list ion-icon{
+    position: absolute;
+    top: 0;
+    height: 40px;
+    transition: .5s;
+    cursor: pointer;
+    width: 30px;
+    padding: 5px;
+}
+.done-btn{
+    right: 40px;
+}
+.done-btn:hover{
+    background-color: #09e01b;
+}
+.remove-btn{
+    right: 0;
+}
+
+.remove-btn:hover{
+    color: #fff;
+    background-color: red;
+}
+
+.hide{
+    display: none;
+    /* vai fazer sumir o teste la no javascript */
+}
+#task-list li.done{
+    background-color: #34073d;
+    color: #fff;
+    text-decoration: line-through;
+    /* risco no meio vamos usar isso no css pra finalizar tarefa done */
+}
